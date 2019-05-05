@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../assets/css/index.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <header id="topmenu">
+        <div class="container">
+            <nav>
+                <a href="#">GERAL</a>
+                <a href="#" class="active">PHP</a>
+                <a href="#">CSS</a>
+                <a href="#">HTML</a>
+                <a href="#">C#</a>
+                <a href="#">JAVASCRIPT</a>
+                <a href="#">SQL</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="conteudo">
+            <aside id="barraNav">
+                <h4>PHP</h4>
+                <a onclick="LoadPage('o-que-e', this)" class="active">O que é?</a>
+                <a onclick="LoadPage('como-comecar', this)">Como começar?</a>
+                <a onclick="LoadPage('como-conectar-ao-banco',this)">Como conectar ao banco?</a>
+            </aside>
+            <main>
+            </main>
+        </section>
+    </div>
+    <script>
+        $.ajax({
+            url: "o-que-e" + ".html",
+            success: function (response) {
+                $('main').html(response);
+            }
+        });
+        function LoadPage(page, t) {
+            $.ajax({
+                url: page + ".html",
+                beforeSend: function() {
+                    $('#barraNav a').removeClass('active');
+                    $(t).addClass('active');
+                },
+                success: function (response) {
+                    $('main').html(response);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

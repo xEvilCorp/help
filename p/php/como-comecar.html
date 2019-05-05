@@ -1,0 +1,51 @@
+<h3>Como começar?</h3>
+<p>Para começar com php é necessário ter um servidor com suporte ao php, uma forma de ter um no ambiente local(pelo
+    localhost) é através do aplicativo wamp no windows.</p><br>
+<div class="group">
+    <h4 style="margin-bottom:  5px;">⚪Wamp</h4>
+    <a href="https://ufpr.dl.sourceforge.net/project/wampserver/WampServer%203/WampServer%203.0.0/wampserver3.1.7_x64.exe"
+        target="_blank" class="download">Download WAMP</a>
+    <p>Basta fazer o download do wamp e instalá-lo com o procedimento normal de instalação.</p>
+    <br>
+    <p>Após instalar o wamp execute-o, um icone do wamp deve aparecer no painel de mini-icones da barra do windows.</p>
+    <br>
+    <p>Clique no icone do wamp e depois na opção <b>Start All Services</b> e pronto, o wamp deverá estar preparado para
+        receber o php.
+    </p>
+</div>
+<br>
+<figure class="sm">
+    <img src="img/wamp1.PNG" alt="opções wamp">
+    <figcaption>Opções wamp</figcaption>
+</figure>
+<p>Clicando novamente no ícone do wamp na barra, é possível observar uma opção chamada <b>www directory</b>, clicando
+    nela, uma pasta é aberta com o nome <b>www</b>, essa é a pasta raiz do servidor, ou seja, é aqui que o servidor
+    busca a primeira página index.php para executar e é dentro dela que ficam as outras pastas de outras páginas que
+    sejam relativas ao site.</p>
+<figure class="sm">
+    <img src="img/wamp2.png" alt="pasta www">
+    <figcaption>WWW Pasta raiz do site</figcaption>
+</figure>
+<p>O servidor começa a procurar os arquivos de site a partir da pasta <b>www</b>, no caso de um servidor local o
+    endereço de acesso
+    a essa pasta no navegador é <b>localhost</b>, mas em sites publicados é o próprio endereço do site, no caso do yahoo
+    será o yahoo.com.br.
+</p><br>
+<p>
+    Se tivéssemos um arquivo na pasta www nomeado peixes.php o acessariámos simplesmente digitando
+    <b>localhost/peixes.php</b>,
+    caso não digitemos nada, deixemos apenas localhost, o servidor irá por pádrão tentar carregar o arquivo index.php se
+    ele existir.
+</p><br>
+<p>Para acessar arquivos em pastas, segue-se o mesmo raciocínio, para acessar a pasta <b>contato</b>, colocariamos
+    <b>localhost/contatos/algumarquivo.php</b> ou ainda apenas <b>localhost/contatos/</b> caso queira acessar o
+    index.php dentro de contatos de uma forma mais curta.
+</p><br>
+<p>Apenas reforçando, quando um site é publicado, a única coisa que muda nessa lógica é a palavra localhost, ela
+    muda para por exemplo uol.com.br ou weshare.com, que são domínios, como exemplo,
+    acessar a página <b>contatos</b> com o domínio da uol seguiria o mesmo exemplo do localhost, ficando
+    <b>uol.com.br/contatos</b>,
+    todas as urls são formadas por essa parte inicial que indica que página se quer acessar.
+</p>
+<br>
+<br>
